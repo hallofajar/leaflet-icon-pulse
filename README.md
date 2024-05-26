@@ -1,24 +1,16 @@
 # leaflet-pulse-icon
 
-<div style="text-align:center" align="center">
-  <img src="http://mapshakers.github.io/projects/leaflet-pulse-icon/leaflet-pulsing-icon.gif" alt="leaflet-pulse-icon" />
-</div>
-
-A very simple [Leaflet](http://leafletjs.com) plugin provides pulsing icon.
+fork From [mapshakers/leaflet-icon-pulse](https://github.com/mapshakers/leaflet-icon-pulse)
 
 _Requires Leaflet 0.7.0 or newer and modern browser_
 
+I just add feature imageIcon inside pulsing
+
 ## Demo
 
-[Check out demo!]()
+[Check out demo!](https://hallofajar.github.io/leaflet-icon-pulse/example/)
 
 ## Using the plugin
-
-#### Install
-
-`npm install @ansur/leaflet-pulse-icon` </br>
-or clone repo & run `npm install` </br>
-or copy files from releases
 
 #### Use
 
@@ -34,8 +26,12 @@ Include the CSS and JavaScript files located in `\dist` directory.
 Create a new L.Icon.Pulse
 
 ```javascript
-var pulsingIcon = L.icon.pulse({ iconSize: [20, 20], color: "red" });
-var marker = L.marker([50, 15], { icon: pulsingIcon }).addTo(map);
+var pulsingImage = L.icon.pulse({
+  iconSize: [20, 20],
+  color: "red",
+  iconImage: "img/icon.png",
+});
+var marker = L.marker([50, 15], { icon: pulsingImage }).addTo(map);
 ```
 
 ### Options
